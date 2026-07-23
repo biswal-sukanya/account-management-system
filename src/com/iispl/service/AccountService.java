@@ -17,4 +17,13 @@ public class AccountService {
 		Account account= new Account(accountNumber,true,openingBalance);
 		return account;
 	}
+	public static void displayAccountDetails(Account account) {
+		
+		//String activeYN = account.
+			System.out.println("---------Account Details ----------");
+			System.out.println();
+			System.out.println("AccountNumber" + " " + "Status" + " " + "Balance");
+			System.out.println(account.getAccountNumber()+ "        " +account.isActive()+"   "+account.getAccountBalance());
+			
+}
 }
