@@ -1,5 +1,20 @@
 package com.iispl.service;
 
-public class AccountService {
+import java.math.BigDecimal;
+import java.util.List;
+import java.util.Scanner;
 
+import com.iispl.model.Account;
+
+public class AccountService {
+	public static Account createAccount() {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Enter the account details");
+		System.out.println("Enter Account Number: ");
+		String accountNumber = scanner.nextLine();
+		System.out.println("Enter the opening Balance: ");
+		BigDecimal openingBalance = scanner.nextBigDecimal();
+		Account account= new Account(accountNumber,true,openingBalance);
+		return account;
+	}
 }
