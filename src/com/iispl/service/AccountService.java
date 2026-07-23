@@ -24,4 +24,7 @@ public class AccountService {
 	        account.setAccountBalance(account.getAccountBalance().add(amount));
 
 	    }
+	 public static void withdrawAmount(Account account, BigDecimal amount) {
+		 account.setAccountBalance(account.getAccountBalance().subtract(amount));
+	 }
 }
