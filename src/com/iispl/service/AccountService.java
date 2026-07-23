@@ -16,5 +16,12 @@ public class AccountService {
 		BigDecimal openingBalance = scanner.nextBigDecimal();
 		Account account= new Account(accountNumber,true,openingBalance);
 		return account;
+		
+	
 	}
+	
+	 public static void depositAmount(Account account, BigDecimal amount) {
+	        account.setAccountBalance(account.getAccountBalance().add(amount));
+
+	    }
 }
