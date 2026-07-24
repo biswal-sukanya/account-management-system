@@ -19,7 +19,7 @@ public class AccountService {
 		
 	
 	}
-	
+	// feature added Deposite Amount 
 	 public static void depositAmount(Account account, BigDecimal amount) {
 	        account.setAccountBalance(account.getAccountBalance().add(amount));
 
