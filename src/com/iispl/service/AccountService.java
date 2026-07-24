@@ -16,7 +16,10 @@ public class AccountService {
 		BigDecimal openingBalance = scanner.nextBigDecimal();
 		Account account= new Account(accountNumber,true,openingBalance);
 		return account;
+		
+	
 	}
+//   feature/display-account
 	public static void displayAccountDetails(Account account) {
 		
 		//String activeYN = account.
@@ -26,4 +29,9 @@ public class AccountService {
 			System.out.println(account.getAccountNumber()+ "        " +account.isActive()+"   "+account.getAccountBalance());
 			
 }
+	
+	 public static void depositAmount(Account account, BigDecimal amount) {
+	        account.setAccountBalance(account.getAccountBalance().add(amount));
+
+	    }
 }
