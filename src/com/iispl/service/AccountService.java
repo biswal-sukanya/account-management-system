@@ -7,6 +7,7 @@ import java.util.Scanner;
 import com.iispl.model.Account;
 
 public class AccountService {
+//
 	public static Account createAccount() {
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Enter the account details");
@@ -20,19 +21,19 @@ public class AccountService {
 	
 	}
 //   feature/display-account
-	public static void displayAccountDetails(Account account) {
-		
-		//String activeYN = account.
-			System.out.println("---------Account Details ----------");
-			System.out.println();
-			System.out.println("AccountNumber" + " " + "Status" + " " + "Balance");
-			System.out.println(account.getAccountNumber()+ "        " +account.isActive()+"   "+account.getAccountBalance());
-			
-}
-	
+	public static void dislayAccountDetails(List<Account> accounts) {
+		System.out.println("----------Account Details -----------");
+		System.out.println();
+		System.out.println("AccountNumber" + " " + "isActive" + " " + "AccountBalance");
+		for(Account account: accounts) {
+			String accountStatus = account.isActive() == true? "Active" :"Invalid";
+			System.out.println(account.getAccountNumber() + " " +accountStatus+" " + account.getAccountBalance());
+		}
+	}
+//	feature/deposite-amount
 	 public static void depositAmount(Account account, BigDecimal amount) {
 	        account.setAccountBalance(account.getAccountBalance().add(amount));
-
+// feature/withdraw-amount
 	    }
 	 public static void withdrawAmount(Account account, BigDecimal amount) {
 		 account.setAccountBalance(account.getAccountBalance().subtract(amount));
