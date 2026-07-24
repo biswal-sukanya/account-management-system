@@ -19,6 +19,16 @@ public class AccountService {
 		
 	
 	}
+//   feature/display-account
+	public static void displayAccountDetails(Account account) {
+		
+		//String activeYN = account.
+			System.out.println("---------Account Details ----------");
+			System.out.println();
+			System.out.println("AccountNumber" + " " + "Status" + " " + "Balance");
+			System.out.println(account.getAccountNumber()+ "        " +account.isActive()+"   "+account.getAccountBalance());
+			
+}
 	
 	 public static void depositAmount(Account account, BigDecimal amount) {
 	        account.setAccountBalance(account.getAccountBalance().add(amount));
